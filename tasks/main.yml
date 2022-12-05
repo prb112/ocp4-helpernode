@@ -643,6 +643,7 @@
 
   - name: Enable restart always for critical services
     include_tasks: restart_config.yaml
+    wantlist: True
     loop: "{{ critical_services }}"
 
   - name: Disable named service
